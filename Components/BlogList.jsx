@@ -10,25 +10,25 @@ const BlogList = () => {
       <div className="flex justify-center gap-6 my-10">
         <button
           onClick={() => setMenu('All')}
-          className={menu === 'All' ? 'bg-white text-black py-2 px-4 rounded-md' : ''}
+          className={menu === 'All' ? 'bg-black text-white py-2 px-4 rounded-md' : ''}
         >
           All
         </button>
         <button
           onClick={() => setMenu('Technology')}
-          className={menu === 'Technology' ? 'bg-white text-black py-2 px-4 rounded-md' : ''}
+          className={menu === 'Technology' ? 'bg-black text-white py-2 px-4 rounded-md' : ''}
         >
           Technology
         </button>
         <button
           onClick={() => setMenu('Travel')}
-          className={menu === 'Travel' ? 'bg-white text-black py-2 px-4 rounded-md' : ''}
+          className={menu === 'Travel' ? 'bg-black text-white py-2 px-4 rounded-md' : ''}
         >
           Travel
         </button>
         <button
           onClick={() => setMenu('Lifestyle')}
-          className={menu === 'Lifestyle' ? 'bg-white text-black py-2 px-4 rounded-md' : ''}
+          className={menu === 'Lifestyle' ? 'bg-black text-white py-2 px-4 rounded-md' : ''}
         >
           Lifestyle
         </button>
@@ -39,6 +39,7 @@ const BlogList = () => {
           .filter((item) => menu === 'All' || item.category === menu)  // Filtering by the selected category
           .map((item, index) => (
             <BlogItem
+              id={item.id}
               key={index}
               image={item.image}
               title={item.title}
