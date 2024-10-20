@@ -30,7 +30,7 @@ const Page = ({ params }) => {
   }
 
   return (
-    <div className='bg-gray-300 py-10 px-5 md:px-12 lg:px-28'>
+    <div className='bg-gray-300 py-10 px-5 md:px-12 lg:px-28 h-full'>
         <Link href={'/'}> <FaBlog className='text-5xl sm:text-7xl mb-5'/> </Link>
       <div className='max-w-3xl mx-auto bg-white border border-gray-300 rounded-lg shadow-lg p-5'>
         <h1 className='text-3xl font-bold text-gray-800 mb-4'>{data.title}</h1>
@@ -63,7 +63,7 @@ const Page = ({ params }) => {
           />
         </div>
       </div>
-      <div className='flex gap-4 justify-center mt-4 items-center'>
+      <div className='flex gap-4 justify-center mt-4 items-center mb-9'>
         <h3>Share on social Media</h3>
         <p><FaFacebook /></p>
         <p><FaWhatsapp /></p>
