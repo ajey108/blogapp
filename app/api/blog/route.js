@@ -12,14 +12,16 @@ const LoadDB = async()=>{
 LoadDB();
 
 
-
+//api to get all blogs
 export async function GET(request) {
-   console.log('Blog GET Hit');
-   return NextResponse.json({msg: 'api working'});
+ const blogs = await blogModel.find({});
+   return NextResponse.json({blogs});
+   
 }
 
 
-//custom function
+
+//api for uploading blog
 
 export async function POST(request) {
     const formData = await request.formData();
