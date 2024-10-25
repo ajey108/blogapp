@@ -2,7 +2,9 @@ import React from 'react'
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Link from 'next/link';
 
-const BlogItem = ({title,desc,image,category,id}) => {
+const BlogItem = ({title,desc,image,category,id,authorImg}) => {
+  console.log('Author Image:', image);
+  console.log('Blog Image:', image);
   return (
     <div className="max-w-[330px] sm:max-w-[300px] bg-white border border-black hover:shadow=[-7px_7px_0_0_#000]">
       <Link href={`/blogs/${id}`}>

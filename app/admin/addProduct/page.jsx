@@ -13,7 +13,7 @@ const page = () => {
     desc: '',
     category: 'Technology',
     author: 'Alexander Smith',
-    authorImg: 'https://thispersondoesnotexist.com/',
+    authorImg:'/author.webp',
   })
 
   //change handler 
@@ -38,8 +38,9 @@ const page = () => {
     const response = await axios.post('/api/blog', formData);
     if (response.data.success) {
       toast.success(response.data.msg);
+      //reset form
       setImage(false);
-      setData({ title: '', desc: '', category: 'Technology', author: 'Alexander Smith', authorImg: 'https://thispersondoesnotexist.com/' });
+      setData({ title: '', desc: '', category: 'Technology', author: 'Alexander Smith', authorImg: '/authorimg.jpg' });
     } else {
       toast.error("Error");
     }

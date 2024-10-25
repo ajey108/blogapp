@@ -53,9 +53,10 @@ const BlogList = () => {
           .filter((item) => menu === 'All' || item.category === menu)  // Filtering by the selected category
           .map((item, index) => (
             <BlogItem
-              id={item.id}
+              id={item._id}
               key={index}
               image={item.image}
+              authorImg={item.authorImg}
               title={item.title}
               desc={item.desc}
               category={item.category}
