@@ -21,7 +21,6 @@ const Page = ({ params }) => {
         });
 
         setData(response.data);
-        classgetAuthorImg(response.data.blog.author);
       } catch (error) {
         setError("Failed to fetch blog data.");
       } finally {
@@ -53,12 +52,13 @@ const Page = ({ params }) => {
             {data.blog?.title || "No Title Available"}
           </h1>
           <Image
-            src={data.blog?.image || ""}
+            src={data.blog?.image || "/default-blog.png"}
             alt="Blog Image"
             width={600}
             height={400}
             className="w-full h-auto rounded-lg mb-4 object-cover"
           />
+
           <h2 className="text-lg font-semibold text-gray-700 mb-2">Content:</h2>
           <p className="text-gray-600 mb-4">
             {data.blog?.desc || "No Description Available"}
@@ -73,11 +73,12 @@ const Page = ({ params }) => {
           </div>
           <div className="mt-4 flex justify-center">
             <Image
-              src={data?.authorImg || ""}
+              src={data?.authorImg || "/authorImg.jpg"}
               alt="Author Image"
-              width={100} // Adjust to a smaller size, e.g., 100x100 for a profile look
+              width={100}
+              s
               height={100}
-              className="rounded-full border border-gray-300 object-cover"
+              className="rounded-full  border border-gray-300 object-cover"
             />
           </div>
 

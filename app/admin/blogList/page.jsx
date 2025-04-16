@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const Page = () => {
+const page = () => {
   const [blogs, setBlogs] = useState([]);
 
   const fetchBlogs = async () => {
@@ -16,13 +16,21 @@ const Page = () => {
   //delete blog
 
   const deleteBlog = async (mongoId) => {
-    const response = await axios.delete("/api/blog", {
-      params: {
-        id: mongoId,
-      },
-    });
-    toast.success(response.data.msg);
-    fetchBlogs();
+    if (!mongoId) {
+      toast.error("Blog ID is missing");
+      return;
+    }
+
+    try {
+      const response = await axios.delete("/api/blog", {
+        params: { id: mongoId },
+      });
+
+      toast.success(response.data.msg);
+      fetchBlogs();
+    } catch (error) {
+      toast.error(error.response?.data?.msg || "Failed to delete blog");
+    }
   };
 
   useEffect(() => {
