@@ -1,8 +1,28 @@
+import axios from "axios";
 import React from "react";
 import { FaBlog } from "react-icons/fa";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { toast } from "react-toastify";
 
 const Header = () => {
+  const [email, setEmail] = React.useState("");
+
+  //submitHandler
+
+  const submitHandler = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("email", email);
+    const res = await axios.post("/api/email", formData);
+    if (res.data.success) {
+      toast.success("Email saved successfully");
+      setEmail("");
+    } else {
+      toast.error("Email not saved successfully");
+    }
+  };
+
   return (
     <div className="py-2 px-5 md:px-12 lg:px-28">
       <div className="flex justify-between items-center">
@@ -19,10 +39,13 @@ const Header = () => {
         </p>
 
         <form
+          onSubmit={submitHandler}
           className="flex justify-between max-w-[500px] scale-75 sm:scale-100 mx-auto mt-10 border-border-black"
           action=""
         >
           <input
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
             type="email"
             placeholder="Enter Your email here  "
             className="pl-4 outline-none w-[75%] border border-solid border-black"
