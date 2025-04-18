@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const BlogItem = ({ title, desc, image, category, id, authorImg }) => {
-  console.log("Author Image:", authorImg);
-  console.log("Blog Image:", image);
+  //console.log("Author Image:", authorImg);
+  // console.log("Blog Image:", image);
   return (
     <div className="max-w-[330px] sm:max-w-[300px] bg-white border border-black hover:shadow=[-7px_7px_0_0_#000]">
       <Link href={`/blogs/${id}`}>
@@ -30,10 +30,10 @@ const BlogItem = ({ title, desc, image, category, id, authorImg }) => {
           height={40}
           className="rounded-full object-cover"
           onError={(e) => {
-            e.target.src = "/default-author.png";
+            e.target.src = "/author.webp";
           }}
         />
-        <p className="text-gray-900 font-medium">Author</p>
+        <p className="text-gray-900 font-medium">JohnDoe</p>
       </div>
 
       <p className="text-center py-2 font-semibold text-sm bg-black text-white tracking-tighter">

@@ -13,6 +13,8 @@ const Page = ({ params }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  //console.log("data from details page", data);
+
   useEffect(() => {
     const fetchBlogData = async () => {
       try {
@@ -48,9 +50,11 @@ const Page = ({ params }) => {
       </Link>
       {data && (
         <div className="max-w-3xl mx-auto bg-white border border-gray-300 rounded-lg shadow-lg p-5">
+          {/* blogtitle */}
           <h1 className="text-3xl font-bold text-gray-800 mb-4">
             {data.blog?.title || "No Title Available"}
           </h1>
+          {/* blogImage */}
           <Image
             src={data.blog?.image || "/default-blog.png"}
             alt="Blog Image"
@@ -58,22 +62,27 @@ const Page = ({ params }) => {
             height={400}
             className="w-full h-auto rounded-lg mb-4 object-cover"
           />
-
+          {/* blogdesc */}
           <h2 className="text-lg font-semibold text-gray-700 mb-2">Content:</h2>
           <p className="text-gray-600 mb-4">
             {data.blog?.desc || "No Description Available"}
           </p>
+          {/* Blog'scategory */}
           <div className="flex items-center justify-between border-t border-gray-300 pt-4">
             <span className="text-sm text-gray-500">
               {data.blog?.category || "No Category"}
             </span>
+            {/* authorname */}
             <span className="text-sm text-gray-500">
               {data.blog?.author || "Unknown Author"}
             </span>
           </div>
+
+          {/* authorImage */}
+
           <div className="mt-4 flex justify-center">
             <Image
-              src={data?.authorImg || "/authorImg.jpg"}
+              src={data?.authorImg || "/author.webp"}
               alt="Author Image"
               width={100}
               s

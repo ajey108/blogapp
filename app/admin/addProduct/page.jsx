@@ -13,7 +13,7 @@ const Page = () => {
     title: "",
     desc: "",
     category: "Technology",
-    author: "Alexander Smith",
+    author: "JohnDoe",
     authorImg: "/author.webp",
   });
 
@@ -22,7 +22,7 @@ const Page = () => {
     const name = e.target.name;
     const value = e.target.value;
     setData({ ...data, [name]: value });
-    console.log(data);
+    //console.log(data);
   };
 
   //submit form

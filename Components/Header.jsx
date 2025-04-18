@@ -16,7 +16,7 @@ const Header = () => {
     formData.append("email", email);
     const res = await axios.post("/api/email", formData);
     if (res.data.success) {
-      toast.success("Email saved successfully");
+      toast.success("Subscribed,Email saved successfully");
       setEmail("");
     } else {
       toast.error("Email not saved successfully");
