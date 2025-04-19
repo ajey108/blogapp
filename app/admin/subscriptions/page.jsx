@@ -5,7 +5,7 @@ import SubsTableItem from "@/Components/AdminComponents/SubsTableItem";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const page = () => {
+const Page = () => {
   const [email, setEmails] = useState([]);
   console.log(email);
 
@@ -76,4 +76,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
