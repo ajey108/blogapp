@@ -12,7 +12,7 @@ const Page = () => {
   const [data, setData] = useState({
     title: "",
     desc: "",
-    category: "Technology",
+    category: "RPG",
     author: "JohnDoe",
     authorImg: "/author.webp",
   });
@@ -44,9 +44,9 @@ const Page = () => {
       setData({
         title: "",
         desc: "",
-        category: "Technology",
-        author: "Alexander Smith",
-        authorImg: "/authorimg.jpg",
+        category: "RPG",
+        author: "John Doe",
+        authorImg: "/author.webp",
       });
     } else {
       toast.error("Error");
@@ -76,7 +76,7 @@ const Page = () => {
             required
           />
         </label>
-        <p className="text-xl mt-4">Blog Title</p>
+        <p className="text-xl mt-4">Game Title</p>
         <input
           onChange={onChangeHandler}
           value={data.title}
@@ -87,7 +87,7 @@ const Page = () => {
           required
         />
 
-        <p className="text-xl mt-4">Blog Description</p>
+        <p className="text-xl mt-4">Game Description</p>
         <textarea
           name="desc"
           onChange={onChangeHandler}
@@ -98,23 +98,23 @@ const Page = () => {
           rows={6}
           required
         />
-        <p className="text-xl mt-4">Blog Category</p>
+        <p className="text-xl mt-4">Game Category</p>
         <select
           onChange={onChangeHandler}
           value={data.category}
           name="category"
           className="w-40 mt-4 px-4 py-3 border border-black text-gray-500"
         >
-          <option value="Technology">Technology</option>
-          <option value="Lifestyle">LifeStyle</option>
-          <option value="Travel">Travel</option>
+          <option value="RPG">RPG</option>
+          <option value="FPS">FPS</option>
+          <option value="HORROR">HORROR</option>
         </select>
         <br />
         <button
           type="submit"
           className="flex items-center gap-2 font-mono py-1 px-3 sm:px-6 border border-solid border-gray-600 hover:bg-gray-900 hover:text-white rounded-md mt-5"
         >
-          Submit{" "}
+          Submit
         </button>
       </form>
     </>

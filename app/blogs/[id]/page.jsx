@@ -24,7 +24,7 @@ const Page = ({ params }) => {
 
         setData(response.data);
       } catch (error) {
-        setError("Failed to fetch blog data.");
+        setError("Failed to fetch Game data.");
       } finally {
         setLoading(false);
       }
@@ -64,9 +64,12 @@ const Page = ({ params }) => {
           />
           {/* blogdesc */}
           <h2 className="text-lg font-semibold text-gray-700 mb-2">Content:</h2>
-          <p className="text-gray-600 mb-4">
-            {data.blog?.desc || "No Description Available"}
-          </p>
+          <div
+            className="game-content"
+            dangerouslySetInnerHTML={{
+              __html: data.blog?.desc || "No Description Available",
+            }}
+          ></div>
           {/* Blog'scategory */}
           <div className="flex items-center justify-between border-t border-gray-300 pt-4">
             <span className="text-sm text-gray-500">

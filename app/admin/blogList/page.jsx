@@ -29,7 +29,7 @@ const page = () => {
       toast.success(response.data.msg);
       fetchBlogs();
     } catch (error) {
-      toast.error(error.response?.data?.msg || "Failed to delete blog");
+      toast.error(error.response?.data?.msg || "Failed to delete game");
     }
   };
 
@@ -49,10 +49,10 @@ const page = () => {
                 Author name
               </th>
               <th scope="col" className="py-3 px-6 ">
-                Blog title
+                Game title
               </th>
               <th scope="col" className="py-3 px-6 ">
-                Blog date
+                Game date
               </th>
               <th scope="col" className="py-3 px-6 ">
                 Action

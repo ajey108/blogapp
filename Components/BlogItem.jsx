@@ -3,7 +3,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import Link from "next/link";
 import Image from "next/image";
 
-const BlogItem = ({ title, desc, image, category, id, authorImg }) => {
+const BlogItem = ({ title, desc, image, category, id, authorImg, author }) => {
   //console.log("Author Image:", authorImg);
   // console.log("Blog Image:", image);
   return (
@@ -33,7 +33,7 @@ const BlogItem = ({ title, desc, image, category, id, authorImg }) => {
             e.target.src = "/author.webp";
           }}
         />
-        <p className="text-gray-900 font-medium">JohnDoe</p>
+        <p className="text-gray-900 font-medium">{author}</p>
       </div>
 
       <p className="text-center py-2 font-semibold text-sm bg-black text-white tracking-tighter">
@@ -42,9 +42,10 @@ const BlogItem = ({ title, desc, image, category, id, authorImg }) => {
 
       <Link href={`/blogs/${id}`} className="block p-5">
         <h5 className="mb-2 text-lg font-medium text-gray-900">{title}</h5>
-        <p className="mb-3 font-normal text-gray-700 tracking-tighter text-sm">
-          {desc}
-        </p>
+        <p
+          className="mb-3 font-normal text-gray-700 tracking-tighter text-sm"
+          dangerouslySetInnerHTML={{ __html: desc.slice(0, 120) }}
+        ></p>
         <div>
           Read More <IoIosArrowRoundForward className="inline w-7" />
         </div>

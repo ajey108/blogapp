@@ -29,7 +29,7 @@ const BlogList = () => {
   }, []);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <p>Loading games ...</p>;
   }
 
   if (error) {
@@ -38,7 +38,7 @@ const BlogList = () => {
 
   return (
     <div className="">
-      <div className="flex justify-center gap-6 my-10">
+      <div className="flex justify-center gap-6 my-10  ">
         <button
           onClick={() => setMenu("All")}
           className={
@@ -48,32 +48,28 @@ const BlogList = () => {
           All
         </button>
         <button
-          onClick={() => setMenu("Technology")}
+          onClick={() => setMenu("RPG")}
           className={
-            menu === "Technology"
-              ? "bg-black text-white py-2 px-4 rounded-md"
-              : ""
+            menu === "RPG" ? "bg-black text-white py-2 px-4 rounded-md" : ""
           }
         >
-          Technology
+          RPG
         </button>
         <button
-          onClick={() => setMenu("Travel")}
+          onClick={() => setMenu("FPS")}
           className={
-            menu === "Travel" ? "bg-black text-white py-2 px-4 rounded-md" : ""
+            menu === "FPS" ? "bg-black text-white py-2 px-4 rounded-md" : ""
           }
         >
-          Travel
+          FPS
         </button>
         <button
-          onClick={() => setMenu("Lifestyle")}
+          onClick={() => setMenu("HORROR")}
           className={
-            menu === "Lifestyle"
-              ? "bg-black text-white py-2 px-4 rounded-md"
-              : ""
+            menu === "HORROR" ? "bg-black text-white py-2 px-4 rounded-md" : ""
           }
         >
-          Lifestyle
+          HORROR
         </button>
       </div>
 
@@ -86,6 +82,7 @@ const BlogList = () => {
                 id={item._id}
                 key={index}
                 image={item.image}
+                author={item.author}
                 authorImg={item.authorImg}
                 title={item.title}
                 desc={item.desc}
@@ -93,7 +90,7 @@ const BlogList = () => {
               />
             ))
         ) : (
-          <p>No blogs available</p>
+          <p>No Games available</p>
         )}
       </div>
     </div>

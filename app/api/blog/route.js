@@ -62,7 +62,7 @@ export async function POST(request) {
 
   await blogModel.create(blogData);
   console.log("Blog saved");
-  return NextResponse.json({ success: true, msg: "Blog added" });
+  return NextResponse.json({ success: true, msg: "Game added" });
 }
 
 //api for deleting blog
@@ -74,5 +74,5 @@ export async function DELETE(request) {
   fs.unlink(`./public/${blog.image}`, () => {});
 
   await blogModel.findByIdAndDelete(id);
-  return NextResponse.json({ success: true, msg: "Blog deleted" });
+  return NextResponse.json({ success: true, msg: "Game deleted" });
 }

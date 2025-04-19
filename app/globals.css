@@ -2,12 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .scrollbar::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-.scrollbar-hide{
-   -ms-overflow-style: none;
-   scrollbar-width:none ;
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.game-content {
+  padding: 36px, 0;
+}
+
+.game-content b {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.game-content p {
+  margin-bottom: 10px;
+}
+
+.game-content h1 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 26px;
+}
+.game-content h2 {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 22px;
+}
+.game-content h3 {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.game-content a {
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(3, 76, 172);
 }
