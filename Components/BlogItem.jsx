@@ -42,10 +42,10 @@ const BlogItem = ({ title, desc, image, category, id, authorImg, author }) => {
 
       <Link href={`/blogs/${id}`} className="block p-5">
         <h5 className="mb-2 text-lg font-medium text-gray-900">{title}</h5>
-        <p
+        <div
           className="mb-3 font-normal text-gray-700 tracking-tighter text-sm"
           dangerouslySetInnerHTML={{ __html: desc.slice(0, 120) }}
-        ></p>
+        ></div>
         <div>
           Read More <IoIosArrowRoundForward className="inline w-7" />
         </div>
