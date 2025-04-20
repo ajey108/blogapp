@@ -7,6 +7,7 @@ import Footer from "@/Components/Footer";
 import { FaBlog } from "react-icons/fa";
 import Link from "next/link";
 import axios from "axios";
+import DOMPurify from "dompurify";
 
 const Page = ({ params }) => {
   const [data, setData] = useState(null);
@@ -67,7 +68,9 @@ const Page = ({ params }) => {
           <div
             className="game-content"
             dangerouslySetInnerHTML={{
-              __html: data.blog?.desc || "No Description Available",
+              __html: DOMPurify.sanitize(
+                data.blog?.desc || "No Description Available"
+              ),
             }}
           ></div>
           {/* Blog'scategory */}

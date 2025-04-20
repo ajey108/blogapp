@@ -2,6 +2,7 @@ import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Link from "next/link";
 import Image from "next/image";
+import DOMPurify from "dompurify";
 
 const BlogItem = ({ title, desc, image, category, id, authorImg, author }) => {
   //console.log("Author Image:", authorImg);
@@ -44,7 +45,9 @@ const BlogItem = ({ title, desc, image, category, id, authorImg, author }) => {
         <h5 className="mb-2 text-lg font-medium text-gray-900">{title}</h5>
         <div
           className="mb-3 font-normal text-gray-700 tracking-tighter text-sm"
-          dangerouslySetInnerHTML={{ __html: desc.slice(0, 120) }}
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(desc.slice(0, 120)),
+          }}
         ></div>
         <div>
           Read More <IoIosArrowRoundForward className="inline w-7" />
