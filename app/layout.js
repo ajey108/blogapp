@@ -7,7 +7,7 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-  title: "Games Blogs App",
+  title: "Games Blog App",
   description: "get latest games blogs",
 };
 
