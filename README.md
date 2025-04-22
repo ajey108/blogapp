@@ -1,26 +1,46 @@
 🎮 GameVerse – A Game-Centric Blog Platform
 GameVerse is a modern, full-stack blog application built with Next.js, React, Node.js, Express, and MongoDB. It serves as a curated hub for game-related blog posts, with an admin panel for blog and subscriber email management.
 
-🚀 Features
-🏠 Public Interface
+#🚀 Features
+#🏠 Public Interface
+
 Homepage with Game Blogs
 Beautifully displayed blog cards focused on the latest in gaming — RPG FPS HORROR.
 
 ![BlogMainHomePage](https://github.com/user-attachments/assets/5b59c027-0ce9-4b0f-b9fc-484bb0995b74)
 
-Detailed Blog View
+
+
+
+#Detailed Blog View
 Click on any blog card to navigate to a full blog post page with rich content.
 
-Email Subscription
+![gameDetialPage](https://github.com/user-attachments/assets/72adc9d3-92b8-4e9c-ac01-e1906e6cf2a0)
+
+
+
+
+
+
+
+
+
+#Email Subscription
 Visitors can subscribe using their email to stay updated with the latest game blogs.
 
-🔐 Admin Panel
+#🔐 Admin Panel
 A secure section only accessible to admins:
 
-Upload Blog
+
+
+
+![adminList](https://github.com/user-attachments/assets/0629fe57-c7da-44c4-8542-15e5a2e50b6f)
+
+
+#Upload Blog
 Easily add a new blog post using the admin form.
 
-Delete Blog
+#Delete Blog
 Manage content by deleting outdated or irrelevant blogs.
 
 Manage Subscriber Emails
@@ -29,9 +49,9 @@ View the list of subscribed emails and delete entries if necessary (e.g., spam o
 🧑‍💻 Tech Stack
 Frontend: Next.js + React
 
-Backend: Node.js + Express
+#Backend: Node.js + Express
 
-Database: MongoDB
+#Database: MongoDB
 
 Styling: Tailwind CSS or your custom choice
 
