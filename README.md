@@ -91,6 +91,9 @@ Email newsletter integration (e.g., Mailchimp)
 🙌 Contributing
 PRs and suggestions are welcome! Please open issues for bugs or feature requests.
 
+📃 License
+This project is licensed under the MIT License.
+
 
 
 
