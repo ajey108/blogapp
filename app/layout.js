@@ -1,4 +1,5 @@
-import "../app/globals.css";
+// app/layout.tsx
+import "./globals.css";
 import { Outfit } from "next/font/google";
 
 const outfit = Outfit({
