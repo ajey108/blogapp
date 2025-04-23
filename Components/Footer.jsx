@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { FaBlog, FaGithub } from "react-icons/fa";
 import { PiUserGearFill } from "react-icons/pi";

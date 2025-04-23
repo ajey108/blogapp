@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import Footer from "@/Components/Footer";
 import { FaBlog } from "react-icons/fa";
