@@ -59,7 +59,7 @@ Styling: Tailwind CSS or your custom choice
 1. Clone the Repository
    
 ```
-git clone https://github.com/yourusername/blogapp.git
+git clone https://github.com/ajey108/blogapp.git
 cd gameverse-blog-app
  ```
 
@@ -74,16 +74,14 @@ Create a .env.local for Next.js and a .env for your Express server. Include:
 # MongoDB
 MONGODB_URI=your_mongodb_connection_string
 
-# Server Port
-PORT=5000
 ```
 
 ✨ Future Ideas
  search for blogs
  
-Admin and user login with JWT
+Admin and user login with JWT with next auth
 
-Like featue
+Like featue, view counter
 
 Email newsletter integration (e.g., Mailchimp)
 
